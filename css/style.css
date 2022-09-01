@@ -13,7 +13,7 @@ body {
   background-image: linear-gradient(#e7cdc7 2%, #f2aba6 108%);
   text-align: center;
   min-height: 100vh;
-  line-height: 1.2;
+  line-height: 1;
   font-family: Pufony;
 }
 
@@ -38,7 +38,7 @@ body {
   margin-right: 0.5rem;
 }
 .container .bio h1 {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
 }
 .container .bio h1:hover {
   text-decoration: underline;
