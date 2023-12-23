@@ -15,6 +15,9 @@ body {
   min-height: 100vh;
   line-height: 1;
   font-family: Pufony;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .container {
