@@ -19,6 +19,7 @@ body{
 	line-height: 1;
 	font-family: Pufony;
 	user-select: none;
+	overflow-x: hidden;
 }
 
 .container{
@@ -109,6 +110,7 @@ body{
 		border: 6px solid rgba(255,255,255,0.8);
 		background-color: #fff;
 		clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+		z-index: -1;
 	}
 
 	.box div:nth-child(1){
