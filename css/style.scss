@@ -1,6 +1,6 @@
 @font-face {
-	font-family: Pufony;
-	src: url(../files/Pufony-1.otf);
+	font-family: YanoneKaffeesatz;
+	src: url(../files/YanoneKaffeesatz-Light.ttf);
 }
 
 
@@ -11,15 +11,19 @@
     }
 
 body{
-	background-color: #f2aba6;
-    	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(2%,#f2aba6),color-stop(108%,#e7cdc7));
-    	background-image: linear-gradient(#e7cdc7 2%,#f2aba6 108%);
+	background-color: #2c657b;
 	text-align: center;
 	min-height: 100vh;
 	line-height: 1;
-	font-family: Pufony;
+	font-family: YanoneKaffeesatz;
 	user-select: none;
 	overflow-x: hidden;
+
+	background-image: url("../img/background/bg.webp");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+
 }
 
 .container{
@@ -32,48 +36,42 @@ body{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 3px solid black;
+		border: 3px dotted  #fff;
+		border-radius: 1%;
 		border-radius: 1%;
 		margin: 0.5rem;
 		margin-bottom: 1rem;
-
+		box-shadow: inset 0 0 0 2000px rgba(212, 212, 212, 0.137);
 
 		.pfp{
-			width: 10rem;
-			height: 10rem;
+			width: 15rem;
+			height: 15rem;
 			margin-right: 0.5rem;
+			margin-top: 0.5rem;
 		}
 
-	
 		h1{
 			font-size: 3.3rem;
+			position: relative;
+
+		}
+		h1::after{
+			content: "";
+			width: 0;
+			height: 4px;
+			background-color: #ffffff;
+			position: absolute;
+			left: 0;
+			bottom: -6px;
+			transition: .6s all ease;
 		}
 
-		h1:hover{
-			text-decoration:underline;
-			cursor:default;
-			transition: all 0.9s ease;
+		h1:hover::after{
+			width: 100%;
 		}
 	}
 
 	.links{
-
-		h2{
-			font-size: 2.5rem;
-		}
-
-		a{
-			text-decoration: none;
-			color: #000;
-
-		}
-
-		img{
-			width: 4rem;
-			border-radius: 50%;
-			margin-right: 1rem;
-
-		}
 
 		.social{
 			padding: 1rem;
@@ -81,9 +79,9 @@ body{
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-			border: #efe5e5 solid 3px;
+			border: #ffffff dotted 3px;
 			margin: 1rem;
-
+			box-shadow: inset 0 0 0 2000px rgba(212, 212, 212, 0.329);
 			.link{
 				padding: 1rem;
 				border-radius: 1%;
@@ -93,17 +91,60 @@ body{
 
 		.social:hover{
 			h2{
-				font-size: 3rem;
+				transform: scale(1.05);
 				transition: all 0.3s ease;
 			}
 		}
 
+		h2{
+			font-size: 2.5rem;
+		}
+
+		a{
+			text-decoration: none;
+			color: inherit;
+		}
+
+		img{
+			width: 4rem;
+			border-radius: 50%;
+			margin-right: 1rem;
+
+		}
 		
+		.social2{
+			border: none;
+			box-shadow: none;
+			
+			img{
+				width: 5rem;
+				transition: .3s ease all;
+				border: 3px dashed  #ffffff;
+			}
+
+			img:hover{
+				transform: scale(1.1);
+			}
+			.a0{
+				margin-left: .5rem;
+			}
+			.a1{
+				width: 4.5rem;
+			}
+			.a2{
+				width: 4rem;
+			}
+			.a3{
+				width: 3.5rem;
+			}
+			.a4{
+				width: 3rem;
+			}
+		}
 	}
 
 
 	.box div{
-
 		position: absolute;
 		width: 4rem;
 		height: 60px;
@@ -144,7 +185,7 @@ body{
 
 	.box div:nth-child(5){
 
-		top: 17%;
+		top: 27%;
 		left: 74%;
 		animation: animate 11s linear infinite;
 	}
@@ -156,36 +197,6 @@ body{
 		animation: animate 15s linear infinite;
 
 	}
-
-	.box div:nth-child(7){
-
-		bottom: 11%;
-		left: 83%;
-		animation: animate 12s linear infinite;
-	}
-
-	.box div:nth-child(8){
-
-		top: 3%;
-		left: 67%;
-		animation: animate 7s linear infinite;
-	}
-
-	.box div:nth-child(9){
-
-		top: 70%;
-		left: 69%;
-		animation: animate 17s linear infinite;
-	}
-	
-	.box div:nth-child(10){
-
-		bottom: 20%;
-		left: 34%;
-		animation: animate 16s linear infinite;
-	}
-
-
 
 
 	@keyframes animate {
@@ -206,6 +217,124 @@ body{
 }
 
 	
-	
+@media(max-width:450px){
+	.container{
+		.bio{
+			.pfp{
+				width: 11rem;
+				height: 11rem;
+				margin-right: none;
+			}
+		}
+		.links{
+			.social2{
+			
+				img{
+					width: 4.5rem;
+				}
+				.a1{
+					width: 4rem;
+				}
+				.a2{
+					width: 3.5rem;
+				}
+				.a3{
+					width: 3rem;
+				}
+				.a4{
+					width: 2.7rem;
+				}
+			}
+		}
+	}
+}	
+
+@media(max-width:400px){
+	.container{
+		.bio{
+			.pfp{
+				width: 10rem;
+				height: 10rem;
+			}
+			.words-div{
+				h1{
+					font-size: 3rem;
+				}
+			}	
+		}
+		.links{
+			.social2{
+			
+				img{
+					width: 3.7rem;
+				}
+				.a1{
+					width: 3.4rem;
+				}
+				.a2{
+					width: 3.1rem;
+				}
+				.a3{
+					width: 2.9rem;
+				}
+				.a4{
+					width: 2.7rem;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width:370px){
+	.container{
+		
+		.links{
+			.social2{
+			
+				img{
+					width: 3.5rem;
+				}
+				.a1{
+					width: 3.2rem;
+				}
+				.a2{
+					width: 2.9rem;
+				}
+				.a3{
+					width: 2.7rem;
+				}
+				.a4{
+					width: 2.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width:350px){
+	.container{
+		
+		.links{
+			.social2{
+			
+				img{
+					width: 3.3rem;
+				}
+				.a1{
+					width: 2.9rem;
+				}
+				.a2{
+					width: 2.7rem;
+				}
+				.a3{
+					width: 2.5rem;
+				}
+				.a4{
+					width: 2.3rem;
+				}
+			}
+		}
+	}
+}	
 
 	
